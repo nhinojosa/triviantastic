@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import useAPI from '@/composables/useAPI'
-
+import BaseTitle from '@/components/BaseTitle.vue'
 const api = useAPI()
 const categories = ref([])
 onMounted(async () => {
@@ -10,11 +10,13 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="brand">
-    <img src="logo.svg" alt="" class="logo">
-    <h1 class="title">Triviantastic</h1>
-    <img src="logo.svg" alt="" class="logo">
-  </div>
+  <BaseTitle>
+    <template #logo>
+      <img src="logo.svg" alt="" />
+    </template>
+    Triviantastic
+    
+  </BaseTitle>
   <div class="categories">
     <RouterLink :to="`/question/category/${category.id}`" v-for="category in categories" :key="category.id" class="category">
       {{ category.name }}
