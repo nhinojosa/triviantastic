@@ -9,7 +9,7 @@
     </div>
 
   </main>
-
+  <p class="score">Score: 100</p>
 </template>
 
 <style lang="postcss" scoped>
@@ -18,5 +18,9 @@
     & .card {
       @apply flex h-5/6 min-h-fit w-11/12 flex-col items-center gap-16 overflow-auto rounded-lg bg-white shadow-lg;
     }
+  }
+
+  .score {
+    @apply absolute  text-white bottom-8 right-8 text-2xl font-bold;
   }
 </style>
