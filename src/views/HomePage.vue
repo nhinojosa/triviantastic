@@ -22,7 +22,6 @@ onMounted(async () => {
       {{ category.name }}
     </RouterLink>
   </div>
-  <p class="score">Score: 100</p>
 </template>
 
 <style lang ="postcss" scoped>
